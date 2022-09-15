@@ -3,6 +3,7 @@
 ]]
 local _, BasicAddon = ...
 BasicAddon = LibStub("AceAddon-3.0"):NewAddon(BasicAddon, "BasicAddon", "AceConsole-3.0", "AceEvent-3.0", "AceHook-3.0")
+
 _G.BasicAddon = BasicAddon -- "_G" is essentially the greater environment all AddOns exist within
 
 local _G = _G
@@ -23,6 +24,9 @@ BasicAddon.CONFIG_VERSION = 1
 -- Code that you want to run when the addon is first loaded goes here. (Actual Blizzard functionality)
 function BasicAddon:OnInitialize() 
     self.db = LibStub("AceDB-3.0"):New("BasicAddonDB", defaults) -- load defaults
+
+    self:SetupOptions() -- initialize and register the options menu
+
     BasicAddon:Print("Initialized BasicAddon") -- Print is from AceConsole
 end
 
@@ -40,3 +44,4 @@ function BasicAddon:OnDisable()
 end
 
 ]]
+

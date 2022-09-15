@@ -30,7 +30,7 @@ BasicAddon.lua
 ## Modules ##
 
 ## Options ##
-##-- Options\Options.lua
+Options\Options.lua
 
 ## Presets -- needs to be the last ##
 ##-- Options\Presets.lua
